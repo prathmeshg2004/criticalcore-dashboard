@@ -1,0 +1,98 @@
+[
+  {
+    "id": "S01",
+    "metric": "Voltech operating income & exports",
+    "period": "FY 2025",
+    "value": "₹306.7 cr (VEPL + VMCPL consolidated)",
+    "source_url": "https://infomericstorage.blob.core.windows.net/uploads/PR_Voltech_Engineers_25_Nov25_a6f74a8fd7.pdf",
+    "confidence": "High"
+  },
+  {
+    "id": "S02",
+    "metric": "BPE reported operating revenue",
+    "period": "FY 2025",
+    "value": "₹314.4 cr (BPE India legal entity)",
+    "source_url": "https://www.thecompanycheck.com/company/best-power-equipments-india-private-limited/U99999DL2000PTC106932",
+    "confidence": "High"
+  },
+  {
+    "id": "S03",
+    "metric": "HiRef turnover floor",
+    "period": "CY 2025",
+    "value": "€81.0m (₹810 cr at ₹100/€)",
+    "source_url": "https://hiref.com/news/hiref-lands-in-usa",
+    "confidence": "High"
+  },
+  {
+    "id": "S04",
+    "metric": "HiRef export & DC share",
+    "period": "CY 2024",
+    "value": "59% export, 62% DC export",
+    "source_url": "https://api.hiref.it/assets/downloads/Bilancio-di-sostenibilita-2024-HiRef.pdf",
+    "confidence": "High"
+  },
+  {
+    "id": "S10",
+    "metric": "MV/LV switchgear peer margin",
+    "period": "FY 2025",
+    "value": "Powell 29.4% (selected 25% proxy)",
+    "source_url": "SEC Form 10-K",
+    "confidence": "Medium"
+  },
+  {
+    "id": "S11",
+    "metric": "Transformer peer margin",
+    "period": "FY 2025",
+    "value": "Hammond 30.3% (selected 25% proxy)",
+    "source_url": "Annual Report",
+    "confidence": "Medium"
+  },
+  {
+    "id": "S12",
+    "metric": "UPS peer margin",
+    "period": "CY 2025",
+    "value": "Delta 34.3% (selected 30% proxy)",
+    "source_url": "Consolidated report",
+    "confidence": "Medium"
+  },
+  {
+    "id": "S13",
+    "metric": "Rack power peer margin",
+    "period": "CY 2025",
+    "value": "Vertiv 35.1% (selected 30% proxy)",
+    "source_url": "SEC Form 10-K",
+    "confidence": "Medium"
+  },
+  {
+    "id": "S14",
+    "metric": "DC cooling peer margin",
+    "period": "CY 2025",
+    "value": "Modine 19.9%-26.8% (selected 25% / 30% proxy)",
+    "source_url": "Company disclosures",
+    "confidence": "Medium"
+  },
+  {
+    "id": "S15",
+    "metric": "Cummins equipment GM",
+    "period": "FY 2025",
+    "value": "25.3% consolidated (selected 25% proxy)",
+    "source_url": "Cummins 10-K",
+    "confidence": "High"
+  },
+  {
+    "id": "S16",
+    "metric": "Controls peer GM",
+    "period": "FY 2025",
+    "value": "Emerson automation 52.8% (selected 35% proxy)",
+    "source_url": "SEC Form 10-K",
+    "confidence": "Medium"
+  },
+  {
+    "id": "SEC10_SEED",
+    "metric": "Capability & India-enablement matrix",
+    "period": "2026-11-14",
+    "value": "Functional spec Section 10 seed matrix",
+    "source_url": "Internal Handoff",
+    "confidence": "Authoritative"
+  }
+]

@@ -1,0 +1,1757 @@
+[
+  {
+    "company_id": "voltech",
+    "company_name": "Voltech Group",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "Power",
+    "ownership_description": "Indian private engineering and manufacturing group",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian manufacturing and service",
+    "evidence_confidence": "High",
+    "source_date": "2026-11-14",
+    "categories": [
+      "mvlv",
+      "transformers"
+    ],
+    "company_categories": [
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "S10"
+      },
+      {
+        "category_id": "transformers",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "S11"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 306.7,
+      "revenue_cagr": 0.07,
+      "ebitda_margin": 0.09843495272253017,
+      "pat_to_ebitda": 0.4011262007287181,
+      "dc_revenue_share": 0.3,
+      "india_share_of_dc_revenue": 0.55,
+      "net_working_capital_share": 0.2876712328767123,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Precedent peer & ratings",
+      "financial_source_id": "S01"
+    },
+    "linked_accounts": [
+      "stt_gdc",
+      "nxtra",
+      "ctrls",
+      "adaniconnex",
+      "microsoft",
+      "aws"
+    ],
+    "missing_fields": []
+  },
+  {
+    "company_id": "bpe",
+    "company_name": "BPE (India) Private Limited",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "UPS & Rack",
+    "ownership_description": "Indian private critical power manufacturer",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian R&D, manufacturing and service",
+    "evidence_confidence": "High",
+    "source_date": "2026-11-14",
+    "categories": [
+      "ups",
+      "rack"
+    ],
+    "company_categories": [
+      {
+        "category_id": "ups",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "S12"
+      },
+      {
+        "category_id": "rack",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "S13"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 314.37,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.08817635270541081,
+      "pat_to_ebitda": 0.6544011544011544,
+      "dc_revenue_share": 0.4,
+      "india_share_of_dc_revenue": 0.8,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Tripp Lite forward precedent",
+      "financial_source_id": "S02"
+    },
+    "linked_accounts": [
+      "yotta"
+    ],
+    "missing_fields": []
+  },
+  {
+    "company_id": "hiref",
+    "company_name": "HiRef S.p.A.",
+    "country": "Italy",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "Italian precision cooling platform (Galletti Group affiliate)",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Existing Ahmedabad manufacturing/service base; qualification and expansion allowance",
+    "evidence_confidence": "High",
+    "source_date": "2026-11-14",
+    "categories": [
+      "central_cooling",
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "central_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "S14"
+      },
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "S14"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 810,
+      "revenue_cagr": 0.1,
+      "ebitda_margin": 0.13,
+      "pat_to_ebitda": 0.6232988822896693,
+      "dc_revenue_share": 0.5216,
+      "india_share_of_dc_revenue": 0.05,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 14,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Precision/liquid cooling peer",
+      "financial_source_id": "S03/S04"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "vishtech",
+    "company_name": "Vishtech Power Private Limited",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "Power",
+    "ownership_description": "India corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian manufacturing",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "mvlv",
+      "transformers"
+    ],
+    "company_categories": [
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      },
+      {
+        "category_id": "transformers",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 40,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.098,
+      "pat_to_ebitda": 0.45,
+      "dc_revenue_share": 0.35,
+      "india_share_of_dc_revenue": 0.85,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "vivid",
+    "company_name": "Vivid Electromech Limited",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "Power",
+    "ownership_description": "India corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian manufacturing",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "mvlv"
+    ],
+    "company_categories": [
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 350,
+      "revenue_cagr": 0.07,
+      "ebitda_margin": 0.098,
+      "pat_to_ebitda": 0.45,
+      "dc_revenue_share": 0.3,
+      "india_share_of_dc_revenue": 0.8,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "tricolite",
+    "company_name": "Tricolite Electrical Industries Limited",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "Power",
+    "ownership_description": "India corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian manufacturing",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "mvlv"
+    ],
+    "company_categories": [
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 280,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.098,
+      "pat_to_ebitda": 0.45,
+      "dc_revenue_share": 0.35,
+      "india_share_of_dc_revenue": 0.8,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "shivalic",
+    "company_name": "Shivalic Power Control Limited",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "Power",
+    "ownership_description": "India corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian manufacturing",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "mvlv"
+    ],
+    "company_categories": [
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 320,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.098,
+      "pat_to_ebitda": 0.45,
+      "dc_revenue_share": 0.3,
+      "india_share_of_dc_revenue": 0.8,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "parth",
+    "company_name": "Parth Electricals & Engineering Limited",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "Power",
+    "ownership_description": "India corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian manufacturing and engineering",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "mvlv"
+    ],
+    "company_categories": [
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 380,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.098,
+      "pat_to_ebitda": 0.45,
+      "dc_revenue_share": 0.3,
+      "india_share_of_dc_revenue": 0.8,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "marine_electricals",
+    "company_name": "Marine Electricals (India) Limited",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "Power",
+    "ownership_description": "India corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian manufacturing and service",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "mvlv",
+      "rack"
+    ],
+    "company_categories": [
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      },
+      {
+        "category_id": "rack",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 750,
+      "revenue_cagr": 0.09,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.45,
+      "dc_revenue_share": 0.3,
+      "india_share_of_dc_revenue": 0.8,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 10,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "t_and_r",
+    "company_name": "Transformers & Rectifiers (India) Limited",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "Power",
+    "ownership_description": "India corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian manufacturing",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "transformers"
+    ],
+    "company_categories": [
+      {
+        "category_id": "transformers",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 600,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.45,
+      "dc_revenue_share": 0.25,
+      "india_share_of_dc_revenue": 0.8,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "power_one",
+    "company_name": "Power-One Micro Systems",
+    "country": "India",
+    "is_indian": true,
+    "primary_lane": "UPS & Rack",
+    "ownership_description": "India corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 0,
+    "basis": "Indian operating base",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "ups"
+    ],
+    "company_categories": [
+      {
+        "category_id": "ups",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 150,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.088,
+      "pat_to_ebitda": 0.45,
+      "dc_revenue_share": 0.35,
+      "india_share_of_dc_revenue": 0.85,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "centiel",
+    "company_name": "Centiel AG",
+    "country": "Switzerland",
+    "is_indian": false,
+    "primary_lane": "UPS & Rack",
+    "ownership_description": "Switzerland corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Light UPS localization; no owned Indian base verified",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "ups"
+    ],
+    "company_categories": [
+      {
+        "category_id": "ups",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 250,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.4,
+      "india_share_of_dc_revenue": 0.15,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "schleifenbauer",
+    "company_name": "Schleifenbauer Products BV",
+    "country": "Netherlands",
+    "is_indian": false,
+    "primary_lane": "UPS & Rack",
+    "ownership_description": "Netherlands corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Light PDU/rack-power assembly and test",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "rack"
+    ],
+    "company_categories": [
+      {
+        "category_id": "rack",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 150,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.45,
+      "india_share_of_dc_revenue": 0.15,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "excool",
+    "company_name": "EXCOOL Holdings Limited",
+    "country": "United Kingdom",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "United Kingdom corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 150,
+    "basis": "Heavy central-cooling manufacturing and full-load test",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "central_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "central_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 450,
+      "revenue_cagr": 0.1,
+      "ebitda_margin": 0.12,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.6,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 12,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "hitema",
+    "company_name": "HITEMA International S.r.l.",
+    "country": "Italy",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "Italy corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 150,
+    "basis": "Chiller and central-cooling line",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "central_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "central_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 350,
+      "revenue_cagr": 0.1,
+      "ebitda_margin": 0.12,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.5,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 12,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "conteg",
+    "company_name": "CONTEG Group",
+    "country": "Czech Republic",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "Czech Republic corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "Rack plus terminal-cooling module localization; no owned base verified",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "rack",
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "rack",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      },
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 300,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.45,
+      "india_share_of_dc_revenue": 0.15,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "stulz",
+    "company_name": "STULZ Group",
+    "country": "Germany",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "Germany corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Existing Indian manufacturing and service network",
+    "evidence_confidence": "High",
+    "source_date": "2026-11-14",
+    "categories": [
+      "central_cooling",
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "central_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "SEC10_SEED"
+      },
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 950,
+      "revenue_cagr": 0.09,
+      "ebitda_margin": 0.11,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.5,
+      "india_share_of_dc_revenue": 0.2,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 12,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "hammond",
+    "company_name": "Hammond Power Solutions",
+    "country": "Canada",
+    "is_indian": false,
+    "primary_lane": "Power",
+    "ownership_description": "Canada corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Existing India operations/manufacturing",
+    "evidence_confidence": "High",
+    "source_date": "2026-11-14",
+    "categories": [
+      "transformers"
+    ],
+    "company_categories": [
+      {
+        "category_id": "transformers",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 500,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.3,
+      "india_share_of_dc_revenue": 0.2,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9.5,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "sgb_smit",
+    "company_name": "SGB-SMIT Group",
+    "country": "Germany/Netherlands",
+    "is_indian": false,
+    "primary_lane": "Power",
+    "ownership_description": "Germany/Netherlands corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Existing India operating/manufacturing presence",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "transformers"
+    ],
+    "company_categories": [
+      {
+        "category_id": "transformers",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 650,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.3,
+      "india_share_of_dc_revenue": 0.15,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9.5,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "virginia_transformer",
+    "company_name": "Virginia Transformer Corporation",
+    "country": "United States",
+    "is_indian": false,
+    "primary_lane": "Power",
+    "ownership_description": "United States corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "India engineering presence; medium localization and validation line",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "transformers"
+    ],
+    "company_categories": [
+      {
+        "category_id": "transformers",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 400,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.3,
+      "india_share_of_dc_revenue": 0.15,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 10,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "wilson_transformer",
+    "company_name": "Wilson Transformer Company",
+    "country": "Australia",
+    "is_indian": false,
+    "primary_lane": "Power",
+    "ownership_description": "Australia corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 150,
+    "basis": "Large-transformer manufacturing and full-load testing; no owned India base verified",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "transformers"
+    ],
+    "company_categories": [
+      {
+        "category_id": "transformers",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 350,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.25,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 10,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "eae_group",
+    "company_name": "EAE Group",
+    "country": "Türkiye",
+    "is_indian": false,
+    "primary_lane": "Power",
+    "ownership_description": "Türkiye corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "MV/LV and busway localization beyond commercial presence",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "mvlv",
+      "rack"
+    ],
+    "company_categories": [
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      },
+      {
+        "category_id": "rack",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 450,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.35,
+      "india_share_of_dc_revenue": 0.2,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9.5,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "terasaki",
+    "company_name": "Terasaki Electric",
+    "country": "Japan",
+    "is_indian": false,
+    "primary_lane": "Power",
+    "ownership_description": "Japan corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "MV/LV and LV-switchgear line; no owned Indian manufacturing base verified",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "mvlv"
+    ],
+    "company_categories": [
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 380,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.095,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.3,
+      "india_share_of_dc_revenue": 0.15,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 9.5,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "socomec",
+    "company_name": "Socomec Group",
+    "country": "France",
+    "is_indian": false,
+    "primary_lane": "UPS & Rack",
+    "ownership_description": "France corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Existing Indian manufacturing and service",
+    "evidence_confidence": "High",
+    "source_date": "2026-11-14",
+    "categories": [
+      "ups",
+      "mvlv"
+    ],
+    "company_categories": [
+      {
+        "category_id": "ups",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "SEC10_SEED"
+      },
+      {
+        "category_id": "mvlv",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "High",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 500,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.4,
+      "india_share_of_dc_revenue": 0.25,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 10,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "riello",
+    "company_name": "Riello Elettronica Group",
+    "country": "Italy",
+    "is_indian": false,
+    "primary_lane": "UPS & Rack",
+    "ownership_description": "Italy corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Existing Indian manufacturing",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "ups"
+    ],
+    "company_categories": [
+      {
+        "category_id": "ups",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 400,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.09,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.4,
+      "india_share_of_dc_revenue": 0.2,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "chatsworth",
+    "company_name": "Chatsworth Products",
+    "country": "United States",
+    "is_indian": false,
+    "primary_lane": "UPS & Rack",
+    "ownership_description": "United States corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Light rack/PDU localization",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "rack"
+    ],
+    "company_categories": [
+      {
+        "category_id": "rack",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 320,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.45,
+      "india_share_of_dc_revenue": 0.15,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "canovate",
+    "company_name": "Canovate Group",
+    "country": "Türkiye",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "Türkiye corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "Rack plus terminal-cooling module localization",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "rack",
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "rack",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      },
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 250,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.4,
+      "india_share_of_dc_revenue": 0.15,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "panduit",
+    "company_name": "Panduit Corporation",
+    "country": "United States",
+    "is_indian": false,
+    "primary_lane": "UPS & Rack",
+    "ownership_description": "United States corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 50,
+    "basis": "Light rack-power localization supported by Indian offices",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "rack"
+    ],
+    "company_categories": [
+      {
+        "category_id": "rack",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 450,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.4,
+      "india_share_of_dc_revenue": 0.2,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "submer",
+    "company_name": "Submer Group",
+    "country": "Spain",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "Spain corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "Liquid/immersion module localization; Indian presence reported",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 200,
+      "revenue_cagr": 0.12,
+      "ebitda_margin": 0.12,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.7,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 13,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "iceotope",
+    "company_name": "Iceotope Group",
+    "country": "United Kingdom",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "United Kingdom corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "Liquid-cooling module production and validation",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 180,
+      "revenue_cagr": 0.12,
+      "ebitda_margin": 0.12,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.7,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 13,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "asperitas",
+    "company_name": "Asperitas",
+    "country": "Netherlands",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "Netherlands corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "Immersion-cooling module production and validation",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 150,
+      "revenue_cagr": 0.12,
+      "ebitda_margin": 0.12,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.7,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 13,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "zutacore",
+    "company_name": "ZutaCore",
+    "country": "United States/Israel",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "United States/Israel corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "Liquid-cooling module localization; India partner/presence reported",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 220,
+      "revenue_cagr": 0.12,
+      "ebitda_margin": 0.12,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.7,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 13,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "dcx",
+    "company_name": "DCX Liquid Cooling Systems",
+    "country": "Poland",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "Poland corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "Liquid-cooling module production and validation",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 120,
+      "revenue_cagr": 0.12,
+      "ebitda_margin": 0.12,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.7,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 13,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "giordano_riello",
+    "company_name": "Giordano Riello International Group (Aermec parent)",
+    "country": "Italy",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "Italy corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 150,
+    "basis": "Heavy central chiller/cooling line",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "central_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "central_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 600,
+      "revenue_cagr": 0.09,
+      "ebitda_margin": 0.11,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.45,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "star_refrigeration",
+    "company_name": "Star Refrigeration Group",
+    "country": "United Kingdom",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "United Kingdom corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 150,
+    "basis": "Heavy industrial/central cooling and test capability",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "central_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "central_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.25,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 400,
+      "revenue_cagr": 0.08,
+      "ebitda_margin": 0.1,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.4,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 11,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  },
+  {
+    "company_id": "grc",
+    "company_name": "GRC (Green Revolution Cooling)",
+    "country": "United States",
+    "is_indian": false,
+    "primary_lane": "Cooling",
+    "ownership_description": "United States corporate structure; whole-company candidate",
+    "whole_company_51_control_route": true,
+    "own_ip_verified": true,
+    "verified_dc_access": true,
+    "india_enablement_crore": 100,
+    "basis": "Immersion-cooling module production and validation",
+    "evidence_confidence": "Medium",
+    "source_date": "2026-11-14",
+    "categories": [
+      "terminal_cooling"
+    ],
+    "company_categories": [
+      {
+        "category_id": "terminal_cooling",
+        "coverage_factor": 1,
+        "component_gross_margin": 0.3,
+        "margin_basis": "category proxy",
+        "confidence": "Medium",
+        "source_id": "SEC10_SEED"
+      }
+    ],
+    "financials": {
+      "revenue_base_year": 2025,
+      "base_revenue": 180,
+      "revenue_cagr": 0.12,
+      "ebitda_margin": 0.12,
+      "pat_to_ebitda": 0.623,
+      "dc_revenue_share": 0.7,
+      "india_share_of_dc_revenue": 0.1,
+      "net_working_capital_share": 0.1,
+      "recurring_capex_share": 0.02,
+      "ev_ebitda_multiple": 13,
+      "net_debt": 0,
+      "surplus_cash": 0,
+      "valuation_basis": "Sector precedent proxy",
+      "financial_source_id": "SEC10_PROXY"
+    },
+    "linked_accounts": [],
+    "missing_fields": []
+  }
+]

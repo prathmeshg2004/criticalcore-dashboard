@@ -1,0 +1,68 @@
+[
+  {
+    "category_id": "mvlv",
+    "category_name": "MV/LV power distribution",
+    "wallet_points": 15.2,
+    "is_fixed": false,
+    "default_gm": 0.25,
+    "lane": "Power"
+  },
+  {
+    "category_id": "transformers",
+    "category_name": "Transformers and substations",
+    "wallet_points": 7,
+    "is_fixed": false,
+    "default_gm": 0.25,
+    "lane": "Power"
+  },
+  {
+    "category_id": "ups",
+    "category_name": "UPS and battery systems",
+    "wallet_points": 4.7,
+    "is_fixed": false,
+    "default_gm": 0.3,
+    "lane": "UPS & Rack"
+  },
+  {
+    "category_id": "rack",
+    "category_name": "Rack power, PDU, RPP and downstream distribution",
+    "wallet_points": 7,
+    "is_fixed": false,
+    "default_gm": 0.3,
+    "lane": "UPS & Rack"
+  },
+  {
+    "category_id": "central_cooling",
+    "category_name": "Central cooling and hydronics",
+    "wallet_points": 10.7,
+    "is_fixed": false,
+    "default_gm": 0.25,
+    "lane": "Cooling"
+  },
+  {
+    "category_id": "terminal_cooling",
+    "category_name": "Terminal and liquid cooling",
+    "wallet_points": 5.3,
+    "is_fixed": false,
+    "default_gm": 0.3,
+    "lane": "Cooling"
+  },
+  {
+    "category_id": "cummins_equipment",
+    "category_name": "Gensets, BESS and microgrid equipment",
+    "wallet_points": 5.8,
+    "is_fixed": true,
+    "default_gm": 0.25,
+    "fixed_provider": "XY Corp",
+    "lane": "Fixed"
+  },
+  {
+    "category_id": "cummins_controls",
+    "category_name": "Power-system controls",
+    "wallet_points": 2.3,
+    "is_fixed": true,
+    "default_gm": 0.35,
+    "fixed_provider": "XY Corp",
+    "lane": "Fixed"
+  }
+]

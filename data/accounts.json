@@ -1,0 +1,74 @@
+[
+  {
+    "account_id": "stt_gdc",
+    "account_parent_name": "STT GDC India",
+    "india_pipeline_mw": 230,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_01",
+    "confidence": "High"
+  },
+  {
+    "account_id": "nxtra",
+    "account_parent_name": "Nxtra by Airtel",
+    "india_pipeline_mw": 170,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_02",
+    "confidence": "High"
+  },
+  {
+    "account_id": "ctrls",
+    "account_parent_name": "CtrlS",
+    "india_pipeline_mw": 150,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_03",
+    "confidence": "High"
+  },
+  {
+    "account_id": "adaniconnex",
+    "account_parent_name": "AdaniConneX",
+    "india_pipeline_mw": 180,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_04",
+    "confidence": "High"
+  },
+  {
+    "account_id": "yotta",
+    "account_parent_name": "Yotta",
+    "india_pipeline_mw": 70,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_05",
+    "confidence": "High"
+  },
+  {
+    "account_id": "capitaland",
+    "account_parent_name": "CapitaLand",
+    "india_pipeline_mw": 125,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_06",
+    "confidence": "High"
+  },
+  {
+    "account_id": "microsoft",
+    "account_parent_name": "Microsoft",
+    "india_pipeline_mw": 242,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_07",
+    "confidence": "High"
+  },
+  {
+    "account_id": "digital_connexion",
+    "account_parent_name": "Digital Connexion",
+    "india_pipeline_mw": 100,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_08",
+    "confidence": "High"
+  },
+  {
+    "account_id": "aws",
+    "account_parent_name": "AWS",
+    "india_pipeline_mw": 338,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_09",
+    "confidence": "High"
+  }
+]

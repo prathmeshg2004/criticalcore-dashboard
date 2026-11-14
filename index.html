@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CriticalCore Acquisition Portfolio Simulator | XY Corp</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Top Header Navigation (Section 3.1) -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <span class="cummins-badge">XY Corp</span>
+      <div>
+        <h1 class="brand-title">CriticalCore acquisition portfolio simulator</h1>
+        <div class="brand-subtitle">Whole-company 51% control acquisitions | Calendar 2030 target</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="btn-benchmark" class="btn btn-benchmark" title="Load authoritative Voltech + BPE + HiRef benchmark">
+        <span>⚡</span> Load Voltech + BPE + HiRef
+      </button>
+      <button id="btn-reset" class="btn btn-reset" title="Reset all selections">
+        <span>↺</span> Clear selections
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Application Body -->
+  <main class="main-container">
+
+    <!-- 1. Main Capability Bar Panel (Section 3.2) -->
+    <section class="panel">
+      <div id="capability-headline" class="capability-headline">
+        Owned CriticalCore capability: 8.1 / 58.0 wallet points (14.0% of target)
+      </div>
+      <div class="capability-subtext">
+        <span>Starting XY Corp position: <b id="cummins-start-val">8.1 pts (14.0%)</b></span>
+        <span>Remaining acquisition requirement before selection: <b id="remaining-req-val">49.9 pts (86.0%)</b></span>
+        <span>Target: <b>58.0 wallet points</b></span>
+      </div>
+
+      <div class="wallet-progress-bar">
+        <div id="progress-cummins" class="progress-segment segment-cummins" style="width: 14%;" title="XY Corp Equipment & Controls (8.1 pts)"></div>
+        <div id="progress-acquired" class="progress-segment segment-acquired" style="width: 0%;" title="Acquired Owned Capability"></div>
+        <div id="progress-procured" class="progress-segment segment-procured" style="width: 0%;" title="Procured Missing Scope at 2% GM"></div>
+      </div>
+
+      <div class="wallet-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--color-brand)"></div> XY Corp Base Owned (8.1 pts)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--color-emerald)"></div> Acquired Owned Capability</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--color-amber)"></div> Procured Scope (2% Commercial GM)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--border-subtle)"></div> Uncovered / Missing Wallet Points</div>
+      </div>
+    </section>
+
+    <!-- 2. Eight Component Tiles Grid (Section 3.3) -->
+    <section class="panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>Component Capability Wallet (58.0 Total Points)</span>
+        </div>
+        <div style="font-size:13px; color:var(--text-muted)">
+          Primary provider assigned per category | Overlaps marked separately
+        </div>
+      </div>
+      <div id="components-container" class="components-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- 3. Accessible-MW Pool Strip directly below Component Row (Section 3.4) -->
+    <section class="accessible-pool-strip">
+      <div class="pool-metric">
+        <span class="pool-label">XY Corp Starting Accessible</span>
+        <span id="pool-cummins-mw" class="pool-value">687 MW</span>
+      </div>
+      <div class="pool-metric">
+        <span class="pool-label">Selected Gross Accessible</span>
+        <span id="pool-selected-gross-mw" class="pool-value">0 MW</span>
+      </div>
+      <div class="pool-metric">
+        <span class="pool-label">Account-Overlap Removed</span>
+        <span id="pool-overlap-removed-mw" class="pool-value" style="color:var(--color-amber)">0 MW</span>
+      </div>
+      <div class="pool-metric">
+        <span class="pool-label">Portfolio Deduplicated Accessible</span>
+        <span id="pool-dedup-accessible-mw" class="pool-value highlight">687 MW</span>
+      </div>
+      <div class="pool-metric">
+        <span class="pool-label">Verified Account Parents</span>
+        <span id="pool-verified-parents-count" class="pool-value">5 Parents</span>
+      </div>
+    </section>
+
+    <!-- 4. Selection Lanes & Portfolio Summary Grid (Section 3.5 & 3.6) -->
+    <section class="selection-layout">
+      
+      <!-- Selection Lanes Column -->
+      <div class="lanes-container" id="lanes-container">
+        <!-- Rendered dynamically: Power (4 slots), UPS & Rack (3 slots), Cooling (4 slots) -->
+      </div>
+
+      <!-- Portfolio Summary Card -->
+      <div class="summary-card">
+        <div>
+          <div class="panel-header">
+            <div class="panel-title">Portfolio Summary</div>
+            <span class="badge badge-partially">Active Selection</span>
+          </div>
+
+          <div class="summary-rows">
+            <div class="summary-row">
+              <span class="summary-label">Selected companies</span>
+              <span id="sum-selected-cos" class="summary-val" style="font-size:12px; max-width:220px; text-align:right">None</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Owned wallet points</span>
+              <span id="sum-wallet-owned" class="summary-val highlight">8.1 / 58.0 pts</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Overlapping wallet points</span>
+              <span id="sum-wallet-overlap" class="summary-val">0.0 pts</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Missing wallet points</span>
+              <span id="sum-wallet-missing" class="summary-val" style="color:var(--color-rose)">49.9 pts</span>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-row">
+              <span class="summary-label">51% Stake cheques</span>
+              <span id="sum-stake-cheques" class="summary-val">₹0.0 cr</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Transaction fees (2.0%)</span>
+              <span id="sum-deal-fees" class="summary-val">₹0.0 cr</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">India-enablement capex</span>
+              <span id="sum-india-enablement" class="summary-val">₹0.0 cr</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">Shared integration/FAT facility</span>
+              <span id="sum-shared-facility" class="summary-val">₹0.0 cr</span>
+            </div>
+            <div class="summary-row" style="padding-top:4px; font-weight:800">
+              <span class="summary-label" style="color:#ffffff">Total acquisition & enablement cash</span>
+              <span id="sum-total-cash" class="summary-val" style="color:var(--color-cyan)">₹0.0 cr</span>
+            </div>
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-row">
+              <span class="summary-label">Deduplicated accessible MW</span>
+              <span id="sum-dedup-mw" class="summary-val">687 MW</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">20% access-based convertible MW</span>
+              <span id="sum-convertible-mw" class="summary-val" style="color:var(--color-emerald)">137 MW</span>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-run-simulation" class="btn-run-simulation" disabled>
+          Run Financial Simulation
+        </button>
+      </div>
+
+    </section>
+
+    <!-- 5. Simulation Results Section (Section 13) -->
+    <section id="results-section" style="display:none; display:flex; flex-direction:column; gap:24px;">
+
+      <!-- Required-MW and access coverage strip (Section 13.1) -->
+      <div class="results-strip">
+        <div class="results-strip-header">
+          <div>
+            <div style="font-size:12px; text-transform:uppercase; color:var(--text-muted); letter-spacing:0.5px">Deterministic Target Solver</div>
+            <div class="required-mw-headline">Required through 2030: <span id="res-required-Y">335.015 MW</span></div>
+          </div>
+          <div style="text-align:right">
+            <span class="badge badge-covered" style="font-size:12px">₹8,000.000 cr Target Reconciled</span>
+          </div>
+        </div>
+
+        <div class="strip-metrics-grid">
+          <div class="strip-metric-card">
+            <div style="font-size:11px; color:var(--text-muted)">Selected-Company 2030 Gross Rev (A)</div>
+            <div id="res-target-A" style="font-family:var(--font-mono); font-size:18px; font-weight:800; color:#fff">₹2,196.588 cr</div>
+          </div>
+          <div class="strip-metric-card">
+            <div style="font-size:11px; color:var(--text-muted)">Residual CriticalCore Target (X)</div>
+            <div id="res-target-X" style="font-family:var(--font-mono); font-size:18px; font-weight:800; color:var(--color-cyan)">₹5,803.412 cr</div>
+          </div>
+          <div class="strip-metric-card">
+            <div style="font-size:11px; color:var(--text-muted)">Required Commercial MW (C)</div>
+            <div id="res-required-C" style="font-family:var(--font-mono); font-size:18px; font-weight:800; color:#fff">331.015 MW</div>
+          </div>
+          <div class="strip-metric-card">
+            <div style="font-size:11px; color:var(--text-muted)">Fixed Accelerated Pilot MW</div>
+            <div style="font-family:var(--font-mono); font-size:18px; font-weight:800; color:#fff">4.000 MW</div>
+          </div>
+          <div class="strip-metric-card">
+            <div style="font-size:11px; color:var(--text-muted)">Deduplicated Accessible Pool</div>
+            <div id="res-pool-mw" style="font-family:var(--font-mono); font-size:18px; font-weight:800; color:#fff">1,600 MW</div>
+          </div>
+          <div class="strip-metric-card">
+            <div style="font-size:11px; color:var(--text-muted)">20% Access Convertible MW</div>
+            <div id="res-convertible-mw" style="font-family:var(--font-mono); font-size:18px; font-weight:800; color:var(--color-emerald)">320.000 MW</div>
+          </div>
+          <div class="strip-metric-card">
+            <div style="font-size:11px; color:var(--text-muted)">Access Coverage of Total MW</div>
+            <div id="res-coverage-pct" style="font-family:var(--font-mono); font-size:18px; font-weight:800; color:#fff">95.5%</div>
+          </div>
+          <div class="strip-metric-card">
+            <div style="font-size:11px; color:var(--text-muted)">Access Balance</div>
+            <div id="res-gap-surplus-mw" style="font-family:var(--font-mono); font-size:18px; font-weight:800; color:var(--color-amber)">-15.015 MW Gap</div>
+          </div>
+        </div>
+
+        <div id="access-status-banner" class="access-status-banner gap">
+          Current relationship access covers 95.5% of required MW; 15.0 MW needs an additional route to market.
+        </div>
+      </div>
+
+      <!-- Main Financial Outputs (Section 13.2) -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">2030 Financial Statements & Investment Returns</div>
+          <div style="font-size:13px; color:var(--text-muted)">
+            Consolidated at 100% control | 49% NCI excluded from XY Corp returns
+          </div>
+        </div>
+
+        <div class="financial-kpi-grid">
+          <div class="kpi-card accent-cyan">
+            <span class="kpi-title">2030 Net Incremental Revenue</span>
+            <span id="kpi-net-incremental-rev" class="kpi-value">₹8,000.000 cr</span>
+            <span class="kpi-sub">Target case reconciled</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">CriticalCore Product Revenue</span>
+            <span id="kpi-cc-product-rev" class="kpi-value">₹6,034.200 cr</span>
+            <span class="kpi-sub">Scaled cohort deliveries</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">Retained Acquired Revenue</span>
+            <span id="kpi-retained-acquired-rev" class="kpi-value">₹2,129.617 cr</span>
+            <span class="kpi-sub">Gross ₹2,196.6cr less migration ₹67.0cr</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">Service & Sustain+ Revenue</span>
+            <span id="kpi-service-sustain-rev" class="kpi-value">₹95.276 cr</span>
+            <span class="kpi-sub">Service ₹91.6cr + Sustain+ ₹3.7cr</span>
+          </div>
+
+          <div class="kpi-card accent-emerald">
+            <span class="kpi-title">Product Gross Profit</span>
+            <span id="kpi-product-gp" class="kpi-value">₹1,645.75 cr (27.27%)</span>
+            <span class="kpi-sub">After 1% integration premium</span>
+          </div>
+          <div class="kpi-card accent-emerald">
+            <span class="kpi-title">Incremental EBITDA</span>
+            <span id="kpi-incremental-ebitda" class="kpi-value">₹1,180.33 cr (14.75%)</span>
+            <span class="kpi-sub">Pre-deal fees operating EBITDA</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">Consolidated PAT</span>
+            <span id="kpi-consolidated-pat" class="kpi-value">₹728.78 cr</span>
+            <span class="kpi-sub">100% controlled operations</span>
+          </div>
+          <div class="kpi-card accent-cyan">
+            <span class="kpi-title">XY Corp-Attributable PAT</span>
+            <span id="kpi-cummins-pat" class="kpi-value">₹411.23 cr</span>
+            <span class="kpi-sub">After 49% minority interest</span>
+          </div>
+
+          <div class="kpi-card">
+            <span class="kpi-title">H1 2027 Pilot Commitment</span>
+            <span id="kpi-pilot-cash" class="kpi-value">₹109.03 cr</span>
+            <span class="kpi-sub">Accelerated 4 MW pilot outlay</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">Acquisition Cash (with Fees)</span>
+            <span id="kpi-acquisition-cash" class="kpi-value">₹1,274.76 cr</span>
+            <span class="kpi-sub">51% cheques + 2% deal fees</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">India-Enablement Capex</span>
+            <span id="kpi-enablement-capex" class="kpi-value">₹50.00 cr</span>
+            <span class="kpi-sub">Foreign qualification capex</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">Shared Integration Facility</span>
+            <span id="kpi-shared-facility" class="kpi-value">₹50.00 cr</span>
+            <span class="kpi-sub">One FAT facility paid in 2027 H2</span>
+          </div>
+
+          <div class="kpi-card accent-amber">
+            <span class="kpi-title">Peak Parent Funding</span>
+            <span id="kpi-peak-funding" class="kpi-value">₹1,615.27 cr</span>
+            <span class="kpi-sub">Modeled peak in 2030 H1</span>
+          </div>
+          <div class="kpi-card accent-amber">
+            <span class="kpi-title">Funding Envelope (1.2% Cont.)</span>
+            <span id="kpi-funding-envelope" class="kpi-value">₹1,634.65 cr</span>
+            <span class="kpi-sub">Unallocated execution reserve</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">First Positive Half-Year FCF</span>
+            <span id="kpi-first-positive-fcf" class="kpi-value">2030 H2</span>
+            <span class="kpi-sub">Cash-flow turnaround period</span>
+          </div>
+          <div class="kpi-card accent-emerald">
+            <span class="kpi-title">Full Cash-Recovery Date</span>
+            <span id="kpi-full-recovery-date" class="kpi-value">2033 H2</span>
+            <span class="kpi-sub">XY Corp net investment recouped</span>
+          </div>
+
+          <div class="kpi-card">
+            <span class="kpi-title">Market Pipeline Penetration</span>
+            <span id="kpi-market-share-mw" class="kpi-value">335.0 MW (8.7%)</span>
+            <span class="kpi-sub">Share of 3,860 MW India DC pipeline</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-title">Variance vs Benchmark</span>
+            <span id="kpi-diff-benchmark" class="kpi-value">0.0 MW (Authoritative Base Case)</span>
+            <span class="kpi-sub">Voltech + BPE + HiRef reference</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Collapsible Calculation Appendix (Section 13.3) -->
+      <div class="appendix-container">
+        <button id="btn-toggle-appendix" class="btn-toggle-appendix">
+          <span>▶ View calculation appendix (Deterministic formulas & full 2027–2042 schedules)</span>
+          <span style="font-size:12px;color:var(--text-muted)">14 Audited Modules</span>
+        </button>
+        <div id="appendix-content" class="appendix-content" style="display:none;">
+          <!-- Dynamically populated with 14 full audited modules -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Candidate Selection Modal (Section 4) -->
+  <div id="candidate-modal" class="modal-overlay" style="display:none;">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Select Acquisition Candidate</div>
+          <div style="font-size:12px; color:var(--text-muted)">Deterministic lexicographical sort per Section 4.2 | 51% controlling stake</div>
+        </div>
+        <button id="btn-close-candidate-modal" class="modal-close-btn" title="Close">✕</button>
+      </div>
+
+      <div class="modal-toolbar" style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+        <input type="text" id="candidate-modal-search" class="modal-search" placeholder="Search by company name, country, or category..." style="flex:1; min-width:240px;">
+        <button id="btn-open-create-candidate" class="btn btn-primary btn-sm" style="white-space:nowrap; display:flex; align-items:center; gap:6px;">
+          <span>+ Add Custom Company</span>
+        </button>
+        <div class="lane-filter-tabs" id="modal-lane-tabs" style="width:100%;">
+          <!-- Lane filter tabs rendered dynamically -->
+        </div>
+      </div>
+
+      <div class="modal-body" id="modal-candidates-list">
+        <!-- Candidate cards rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlap Warning Modal (Section 4.4) -->
+  <div id="warning-modal" class="modal-overlay" style="display:none; z-index:110;">
+    <div class="warning-box">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-title">Overlap warning</div>
+      <div id="warning-modal-copy" class="warning-copy">
+        <!-- Verbatim copy dynamically rendered per Section 4.4 -->
+      </div>
+      <div class="warning-actions">
+        <button id="btn-warning-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="btn-warning-continue" class="btn btn-primary">Continue with selection</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Missing Capability Procurement Warning Modal (Section 3.7) -->
+  <div id="missing-capability-modal" class="modal-overlay" style="display:none; z-index:110;">
+    <div class="warning-box">
+      <div class="warning-icon">ℹ️</div>
+      <div class="warning-title">Missing Capability Notice</div>
+      <div class="warning-copy">
+        The current portfolio has uncovered wallet points. Uncovered components will be commercially procured at a <b>2.0% gross margin</b> in the simulation.<br><br>
+        <b>Missing Categories:</b>
+        <div id="missing-categories-list" style="margin-top:10px;"></div>
+      </div>
+      <div class="warning-actions">
+        <button id="btn-missing-cancel" class="btn btn-secondary">Return to portfolio</button>
+        <button id="btn-missing-procure" class="btn btn-primary">Continue with procurement</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Valuation / Diligence Input Modal -->
+  <div id="valuation-entry-modal" class="modal-overlay" style="display:none; z-index:120;">
+    <div class="modal-box" style="max-width: 640px;">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title" id="val-modal-co-name">Enter Financials & Valuation</div>
+          <div style="font-size:12px; color:var(--text-muted)">Populate mandatory financial fields per Section 14.2 & 7.1 to enable candidate in selector</div>
+        </div>
+        <button id="btn-close-val-modal" class="modal-close-btn" title="Close">✕</button>
+      </div>
+
+      <div class="modal-body" style="padding:20px 28px;">
+        <div style="background:var(--pastel-sky-bg); border:1px solid var(--pastel-sky-border); border-radius:var(--radius-md); padding:12px 16px; font-size:13.5px; color:var(--pastel-sky-text); margin-bottom:18px;">
+          Per the functional specification (Section 14.5), company financial filings require due diligence before entering the production selector. You can manually enter values or click <b>Pre-fill Sector Proxy</b> to test this target immediately.
+        </div>
+
+        <form id="valuation-entry-form" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div>
+            <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Base Revenue (₹ crore) *</label>
+            <input type="number" step="0.1" id="val-input-revenue" class="modal-search" style="width:100%; margin-top:4px;" required placeholder="e.g. 250.0">
+          </div>
+          <div>
+            <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Base Year</label>
+            <input type="number" id="val-input-base-year" class="modal-search" style="width:100%; margin-top:4px;" value="2025" required>
+          </div>
+          <div>
+            <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Revenue CAGR (decimal, e.g. 0.08) *</label>
+            <input type="number" step="0.01" id="val-input-cagr" class="modal-search" style="width:100%; margin-top:4px;" required placeholder="e.g. 0.08">
+          </div>
+          <div>
+            <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">EBITDA Margin (decimal, e.g. 0.10) *</label>
+            <input type="number" step="0.001" id="val-input-ebitda-margin" class="modal-search" style="width:100%; margin-top:4px;" required placeholder="e.g. 0.10">
+          </div>
+          <div>
+            <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">EV / EBITDA Multiple (x) *</label>
+            <input type="number" step="0.5" id="val-input-ev-ebitda" class="modal-search" style="width:100%; margin-top:4px;" required placeholder="e.g. 10.0">
+          </div>
+          <div>
+            <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">DC Revenue Share (decimal)</label>
+            <input type="number" step="0.05" id="val-input-dc-share" class="modal-search" style="width:100%; margin-top:4px;" value="0.35">
+          </div>
+          <div>
+            <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">India DC Share (decimal)</label>
+            <input type="number" step="0.05" id="val-input-india-dc-share" class="modal-search" style="width:100%; margin-top:4px;" value="0.50">
+          </div>
+          <div>
+            <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Pipeline Access MW (Quantified)</label>
+            <input type="number" step="10" id="val-input-pipeline-mw" class="modal-search" style="width:100%; margin-top:4px;" value="0" placeholder="0 if not quantified">
+          </div>
+        </form>
+      </div>
+
+      <div style="padding:18px 28px; background:#f8fafc; border-top:1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center;">
+        <button type="button" id="btn-val-prefill-proxy" class="btn btn-secondary btn-sm" style="color:var(--color-brand)">
+          ⚡ Pre-fill Sector Benchmark Proxy
+        </button>
+        <div style="display:flex; gap:10px;">
+          <button type="button" id="btn-val-cancel" class="btn btn-secondary">Cancel</button>
+          <button type="button" id="btn-val-save" class="btn btn-primary">Save & Enable Candidate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Custom Candidate Modal -->
+  <div id="create-candidate-modal" class="modal-overlay" style="display:none; z-index:125;">
+    <div class="modal-box" style="max-width: 760px; max-height: 90vh; overflow-y: auto;">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Add Custom Acquisition Candidate</div>
+          <div style="font-size:13px; color:var(--text-muted)">Define a new company target with financial parameters, capabilities, and accounts</div>
+        </div>
+        <button id="btn-close-create-modal" class="modal-close-btn" title="Close">✕</button>
+      </div>
+
+      <div class="modal-body" style="padding:22px 28px;">
+        <form id="create-candidate-form" style="display:flex; flex-direction:column; gap:20px;">
+          
+          <!-- Identity Section -->
+          <div>
+            <div style="font-size:13px; font-weight:700; color:var(--color-brand); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.5px;">1. Company Identity</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px;">
+              <div>
+                <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Company Name *</label>
+                <input type="text" id="new-cand-name" class="modal-search" style="width:100%; margin-top:4px;" required placeholder="e.g. Apex Transformers Ltd">
+              </div>
+              <div>
+                <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Primary Lane *</label>
+                <select id="new-cand-lane" class="modal-search" style="width:100%; margin-top:4px; height:42px;" required>
+                  <option value="Power">Power</option>
+                  <option value="UPS & Rack">UPS & Rack</option>
+                  <option value="Cooling">Cooling</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Country *</label>
+                <input type="text" id="new-cand-country" class="modal-search" style="width:100%; margin-top:4px;" required value="India">
+              </div>
+            </div>
+            <div style="margin-top:14px;">
+              <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">India Enablement Tier *</label>
+              <select id="new-cand-tier" class="modal-search" style="width:100%; margin-top:4px; height:42px;" required>
+                <option value="Tier 1">Tier 1: Domestic M&E (0% capex penalty, immediate supply)</option>
+                <option value="Tier 2">Tier 2: Technology Transfer (10% import capex, 12-mo localization)</option>
+                <option value="Tier 3">Tier 3: Direct Import / Foreign JV (25% capex penalty, 24-mo transfer)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Valuation Section -->
+          <div>
+            <div style="font-size:13px; font-weight:700; color:var(--color-brand); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.5px;">2. Mandatory Valuation & Financials</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+              <div>
+                <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Base Revenue (₹ crore) *</label>
+                <input type="number" step="0.1" id="new-cand-revenue" class="modal-search" style="width:100%; margin-top:4px;" required placeholder="e.g. 250.0">
+              </div>
+              <div>
+                <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Revenue CAGR (decimal, e.g. 0.08) *</label>
+                <input type="number" step="0.01" id="new-cand-cagr" class="modal-search" style="width:100%; margin-top:4px;" required value="0.08">
+              </div>
+              <div>
+                <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">EBITDA Margin (decimal, e.g. 0.12) *</label>
+                <input type="number" step="0.001" id="new-cand-ebitda" class="modal-search" style="width:100%; margin-top:4px;" required value="0.12">
+              </div>
+              <div>
+                <label style="font-size:12px; text-transform:uppercase; color:var(--text-muted); font-weight:700;">EV / EBITDA Multiple (x) *</label>
+                <input type="number" step="0.5" id="new-cand-multiple" class="modal-search" style="width:100%; margin-top:4px;" required value="10.0">
+              </div>
+            </div>
+          </div>
+
+          <!-- Capability Categories Checkboxes -->
+          <div>
+            <div style="font-size:13px; font-weight:700; color:var(--color-brand); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.5px;">3. Supplied Capability Categories</div>
+            <div id="new-cand-categories" style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+              <label style="display:flex; align-items:center; gap:10px; font-size:13px; background:#f8fafc; padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="GENSET"> Diesel Gensets (16.0 pts)
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; font-size:13px; background:#f8fafc; padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="HT_SUB"> HT Substation & Transformers (8.0 pts)
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; font-size:13px; background:#f8fafc; padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="MV_TRANS"> MV Distribution Transformers (6.0 pts)
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; font-size:13px; background:#f8fafc; padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="UPS"> Uninterruptible Power Supply (12.0 pts)
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; font-size:13px; background:#f8fafc; padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="RACK"> Rack Enclosures & PDUs (4.0 pts)
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; font-size:13px; background:#f8fafc; padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="AIR_COOL"> Precision Air Handling / CRAH (4.0 pts)
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; font-size:13px; background:#f8fafc; padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="LIQ_COOL"> Direct-to-Chip Liquid Cooling (4.0 pts)
+              </label>
+              <label style="display:flex; align-items:center; gap:10px; font-size:13px; background:#f8fafc; padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="CHILLER"> Magnetic Bearing Chillers (4.0 pts)
+              </label>
+            </div>
+          </div>
+
+          <!-- Accounts Checkboxes -->
+          <div>
+            <div style="font-size:13px; font-weight:700; color:var(--color-brand); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.5px;">4. Verified Customer DC Accounts</div>
+            <div id="new-cand-accounts" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+              <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; background:#f8fafc; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="STT_GDC"> STT GDC (700 MW)
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; background:#f8fafc; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="CTRL_S"> CtrlS (600 MW)
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; background:#f8fafc; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="YOTTA"> Yotta (500 MW)
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; background:#f8fafc; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="NTT_GDC"> NTT GDC (450 MW)
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; background:#f8fafc; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="ADANI_CONNEX"> AdaniConneX (450 MW)
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; background:#f8fafc; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="AIRTEL_NXTRA"> Airtel Nxtra (400 MW)
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; background:#f8fafc; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="SIFY_INFRA"> Sify (350 MW)
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; background:#f8fafc; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="PDG"> Princeton Digital (250 MW)
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:12.5px; background:#f8fafc; padding:8px 12px; border-radius:var(--radius-sm); border:1px solid var(--border-subtle); color:var(--text-main); cursor:pointer;">
+                <input type="checkbox" value="RELIANCE_JIO"> Reliance Jio (160 MW)
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div style="padding:18px 28px; background:#f8fafc; border-top:1px solid var(--border-subtle); display:flex; justify-content:flex-end; gap:12px;">
+        <button type="button" id="btn-create-cand-cancel" class="btn btn-secondary">Cancel</button>
+        <button type="button" id="btn-create-cand-save" class="btn btn-primary">Save & Add to Candidates</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{
+  "targetNetIncrementalRevenue2030": 8000,
+  "referenceSystemPricePerMW": 42.9,
+  "mwWeightedIntegrationPremium": 0.01,
+  "lastCohortPremiumOverMean": 0.03,
+  "approachToSignMonths": 6,
+  "deploymentMonths": 12,
+  "pilotITMW": 4,
+  "pilotProductGrossMargin": 0,
+  "ownershipStake": 0.51,
+  "revenueAndEbitdaConsolidation": 1,
+  "nonControllingInterestShare": 0.49,
+  "ordinaryAnnualServiceFeeRate": 0.05,
+  "ordinaryServiceAttachmentRate": 0.7,
+  "sustainPlusAnnualFeeRate": 0.005,
+  "sustainPlusPaidLaunchDate": "2029-01-01",
+  "sustainPlusUptake": {
+    "launchH1": 0.2,
+    "launchH2": 0.3,
+    "thereafter": 0.4
+  },
+  "insuranceAllowanceRate": 0.1,
+  "serviceGrossMarginBeforeInsurance": 0.41961615832110044,
+  "centralOverheadRate": 0.12,
+  "annualMinimumLaunchOverhead": 39.58279448275863,
+  "manufacturingDARate": 0.014,
+  "recurringManufacturingCapexRate": 0.02,
+  "criticalCoreNWCShare": 0.1,
+  "serviceReceivableLagDays": 60,
+  "pilotReceivableLagDays": 95,
+  "newBusinessPatToEbitdaProxy": 0.6232988822896693,
+  "sharedIntegrationFacilityCost": 50,
+  "acquisitionTransactionFeeRate": 0.02,
+  "fundingContingencyRate": 0.012,
+  "serviceAssetLifeHorizonYears": 10,
+  "forecastEndYear": 2042,
+  "commercialProcuredMissingGrossMargin": 0.02,
+  "maxEligible51TicketCheque": 1364.59,
+  "marketTotalPipelineMW": 3860,
+  "marketOperational2026MW": 1789,
+  "marketPhasingYears": 4.5,
+  "cumminsGensetBessWalletShare": 0.09999999999999999,
+  "cumminsStartingAccessibleMW": 687,
+  "cumminsAccessibleAccounts": [
+    "ctrls",
+    "yotta",
+    "capitaland",
+    "microsoft",
+    "digital_connexion"
+  ],
+  "benchmarkPoolAccessibleMW": 1600,
+  "commercialCohortsBase": [
+    {
+      "name": "2027 H2",
+      "mw": 4,
+      "share": 0.011267605633802818,
+      "price": 39.9360815677966,
+      "rec2030Share": 0
+    },
+    {
+      "name": "2028 H1",
+      "mw": 12,
+      "share": 0.03380281690140845,
+      "price": 40.7182441949153,
+      "rec2030Share": 0
+    },
+    {
+      "name": "2028 H2",
+      "mw": 24,
+      "share": 0.0676056338028169,
+      "price": 41.5004068220339,
+      "rec2030Share": 0
+    },
+    {
+      "name": "2029 H1",
+      "mw": 55,
+      "share": 0.15492957746478872,
+      "price": 42.2825694491525,
+      "rec2030Share": 0.5
+    },
+    {
+      "name": "2029 H2",
+      "mw": 80,
+      "share": 0.22535211267605634,
+      "price": 43.0647320762712,
+      "rec2030Share": 1
+    },
+    {
+      "name": "2030 H1",
+      "mw": 85,
+      "share": 0.23943661971830985,
+      "price": 43.8468947033898,
+      "rec2030Share": 0.5
+    },
+    {
+      "name": "2030 H2",
+      "mw": 95,
+      "share": 0.2676056338028169,
+      "price": 44.62887,
+      "rec2030Share": 0
+    }
+  ]
+}
