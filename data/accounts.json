@@ -70,5 +70,29 @@
     "pipeline_as_of_date": "2026-11-14",
     "source_id": "S_PIPE_09",
     "confidence": "High"
+  },
+  {
+    "account_id": "reliance_jio",
+    "account_parent_name": "Reliance Jio",
+    "india_pipeline_mw": 160,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_10",
+    "confidence": "High"
+  },
+  {
+    "account_id": "sify",
+    "account_parent_name": "Sify Technologies",
+    "india_pipeline_mw": 200,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_11",
+    "confidence": "High"
+  },
+  {
+    "account_id": "pdg",
+    "account_parent_name": "Princeton Digital Group",
+    "india_pipeline_mw": 150,
+    "pipeline_as_of_date": "2026-11-14",
+    "source_id": "S_PIPE_12",
+    "confidence": "High"
   }
 ]

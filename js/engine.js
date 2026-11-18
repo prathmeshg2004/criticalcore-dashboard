@@ -99,6 +99,10 @@
       }
     });
 
+    if (grossAccessibleMW === 0 && candidate.pipeline_access_mw > 0) {
+      grossAccessibleMW = candidate.pipeline_access_mw;
+    }
+
     const incrementalAccessibleMW = Math.max(0, grossAccessibleMW - accountOverlapMW);
     const accountOverlapRatio = grossAccessibleMW > 0 ? (accountOverlapMW / grossAccessibleMW) : 0;
 
@@ -344,12 +348,19 @@
     let selectedGrossAccessibleMW = 0;
 
     selectedCompanies.forEach(c => {
-      (c.linked_accounts || []).forEach(accId => {
-        const acc = accountsMap[accId];
-        const mw = (acc && acc.india_pipeline_mw) ? acc.india_pipeline_mw : 0;
-        selectedGrossAccessibleMW += mw;
-        portfolioAccountSet.add(accId);
-      });
+      const accs = c.linked_accounts || [];
+      if (accs.length > 0) {
+        accs.forEach(accId => {
+          const acc = accountsMap[accId];
+          const mw = (acc && acc.india_pipeline_mw) ? acc.india_pipeline_mw : 0;
+          selectedGrossAccessibleMW += mw;
+          portfolioAccountSet.add(accId);
+        });
+      } else if (c.pipeline_access_mw > 0) {
+        selectedGrossAccessibleMW += c.pipeline_access_mw;
+        const synthId = `acc_${c.company_id}`;
+        portfolioAccountSet.add(synthId);
+      }
     });
 
     let portfolioAccessibleMW = 0;

@@ -901,13 +901,14 @@
               <span class="chip">${m.offeredWalletPoints.toFixed(1)} Offered Pts</span>
               ${m.capabilityOverlapPoints > 0 ? `<span class="chip" style="color:var(--color-amber)">Overlap: ${m.capabilityOverlapPoints.toFixed(1)} pts</span>` : ''}
               <span class="chip">Categories: ${categoriesText}</span>
+              ${m.grossAccessibleMW > 0 ? `<span class="chip" style="border-color:var(--pastel-sky-border); background:var(--pastel-sky-bg); color:var(--pastel-sky-text); font-weight:600;">Access: ${m.grossAccessibleMW.toFixed(0)} MW (${(cand.linked_accounts || []).map(a => state.accountsMap[a]?.account_parent_name || a).join(', ')})</span>` : '<span class="chip" style="color:var(--text-muted)">MW not publicly quantified</span>'}
             </div>
             <div class="cand-metrics-row">
               <span>51% Stake: <b>${m.hasMandatoryValuation ? formatINR(m.stakeCheque51, 1) : 'Data required'}</b></span>
               <span>All-In Cost: <b>${m.hasMandatoryValuation ? formatINR(m.allInCandidateCost, 1) : 'Data required'}</b></span>
               <span>Cost/Inc Pt: <b>${m.hasMandatoryValuation && m.costPerIncrementalWalletPoint !== Infinity ? formatINR(m.costPerIncrementalWalletPoint, 1) : '—'}</b></span>
-              <span>Gross MW: <b>${m.grossAccessibleMW} MW</b></span>
-              <span>Inc MW: <b>${m.incrementalAccessibleMW} MW</b></span>
+              <span>Gross MW: <b style="color:var(--color-brand)">${m.grossAccessibleMW.toFixed(0)} MW</b></span>
+              <span>Inc MW: <b style="color:var(--color-emerald)">${m.incrementalAccessibleMW.toFixed(0)} MW</b></span>
               <span>Confidence: <b>${m.evidenceConfidence}</b></span>
             </div>
           </div>
@@ -1146,24 +1147,28 @@
     let proxyDCShare = 0.35;
     let proxyIndiaShare = cand.is_indian ? 0.80 : 0.10;
 
+    let proxyMW = 250;
     if (cand.primary_lane === 'Cooling') {
       proxyRev = cand.is_indian ? 200.0 : 450.0;
       proxyCagr = 0.10;
       proxyEbitda = 0.12;
       proxyMultiple = 12.0;
       proxyDCShare = 0.50;
+      proxyMW = 380;
     } else if (cand.primary_lane === 'UPS & Rack') {
       proxyRev = cand.is_indian ? 220.0 : 350.0;
       proxyCagr = 0.08;
       proxyEbitda = 0.09;
       proxyMultiple = 11.0;
       proxyDCShare = 0.40;
+      proxyMW = 300;
     } else { // Power
       proxyRev = cand.is_indian ? 280.0 : 400.0;
       proxyCagr = 0.08;
       proxyEbitda = 0.10;
       proxyMultiple = 9.5;
       proxyDCShare = 0.30;
+      proxyMW = 450;
     }
 
     document.getElementById('val-input-revenue').value = proxyRev;
@@ -1173,6 +1178,7 @@
     document.getElementById('val-input-ev-ebitda').value = proxyMultiple;
     document.getElementById('val-input-dc-share').value = proxyDCShare;
     document.getElementById('val-input-india-dc-share').value = proxyIndiaShare;
+    document.getElementById('val-input-pipeline-mw').value = proxyMW;
   }
 
   function saveValuation() {
@@ -1214,8 +1220,9 @@
     // Clear missing fields
     cand.missing_fields = [];
 
-    // If custom MW provided and no accounts linked yet, create synthetic link
-    if (pipeMW > 0 && (!cand.linked_accounts || cand.linked_accounts.length === 0)) {
+    // Update custom pipeline MW if provided
+    if (pipeMW > 0) {
+      cand.pipeline_access_mw = pipeMW;
       const syntheticAccId = `acc_${cand.company_id}`;
       state.accountsMap[syntheticAccId] = {
         account_id: syntheticAccId,
@@ -1225,7 +1232,9 @@
         source_id: 'USER_INPUT',
         confidence: 'Medium'
       };
-      state.accounts.push(state.accountsMap[syntheticAccId]);
+      if (!state.accounts.some(a => a.account_id === syntheticAccId)) {
+        state.accounts.push(state.accountsMap[syntheticAccId]);
+      }
       cand.linked_accounts = [syntheticAccId];
     }
 
